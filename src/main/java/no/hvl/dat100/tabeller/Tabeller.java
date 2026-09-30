@@ -12,9 +12,20 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
+		String nyTabell = "[";
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		for (int i = 0; i < tabell.length; i++){
+
+			nyTabell += tabell[i];
+
+			if(i < tabell.length - 1){
+				nyTabell += ",";
+			}
+		}
+		nyTabell += "]";
+
+		return nyTabell;
+
 	}
 
 	// c)
@@ -55,9 +66,15 @@ public class Tabeller {
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
+		int nyLengde = tabell1.length + tabell2.length;
+		int [] tabell3 = new int[nyLengde];
+		for (int i = 0; i < tabell1.length; i++){
+			tabell3[i] = tabell1[i];
+		}
+		for (int j=0; j < tabell2.length; j++){
+			tabell3[tabell1.length+j] = tabell2[j];
+		}
+		return tabell3;
 	}
+
 }
