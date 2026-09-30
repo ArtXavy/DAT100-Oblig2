@@ -79,7 +79,7 @@ return true;
 }
 		// TODO
 		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
-	}
+
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
