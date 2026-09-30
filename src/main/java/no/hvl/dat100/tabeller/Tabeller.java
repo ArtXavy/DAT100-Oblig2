@@ -4,9 +4,9 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		for (int tall : tabell){
+			System.out.println(tall);
+		}
 
 	}
 
