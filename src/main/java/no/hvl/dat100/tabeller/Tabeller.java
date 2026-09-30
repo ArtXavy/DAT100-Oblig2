@@ -52,14 +52,31 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
+		if (tabell == null) {
+			return null;
+		}
+		int[] nyTabell = new int[tabell.length];
+		for (int i = 0; i < tabell.length; i++) {
+			nyTabell[i] = tabell[tabell.length - 1 - i];
+		}
+		return nyTabell;
+	}
 		// TODO
 		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
-	}
+
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
+if (tabell == null) {
+	return false;
+}
+for (int i = 0; i < tabell.length - 1; i++) {
+	if (tabell[i] > tabell[i + 1]) {
+		return false;
+	}
+}
+return true;
+}
 		// TODO
 		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
 	}
