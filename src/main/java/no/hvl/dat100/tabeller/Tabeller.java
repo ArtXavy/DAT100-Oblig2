@@ -30,24 +30,32 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
+		int sum = 0;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		for (int tall : tabell) {
+			sum += tall;
+		}
+		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		for (int verdi : tabell) {
+			if (verdi == tall) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		for(int i = 0; i < tabell.length; i++) {
+			if (tabell[i] == tall) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	// f)
