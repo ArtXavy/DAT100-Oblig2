@@ -16,8 +16,11 @@ public class Matriser {
 	public static String tilStreng(int[][] matrise) {
 		String resultat = "";
 		for (int[] rad : matrise) {
-			for (int tall : rad) {
-				resultat += tall + " ";
+			for (int j = 0; j < rad.length; j++) {
+				resultat += rad[j];
+				if (j < rad.length - 1) {
+					resultat += " ";
+				}
 			}
 			resultat += "\n";
 		}
